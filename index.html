@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Infinite Loop - Bootstrap 4.0 HTML Template</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+      <!--
+      Tooplate 2117 Infinite Loop
+      https://www.tooplate.com/view/2117-infinite-loop
+      -->
+      <style>
+          .navbar-nav {
+              display: flex;
+              justify-content: flex-start;
+              width: 400%;
+              padding-left: 90px;
+          }
+
+          .sphere-container {
+              position: absolute; /* Для возможности регулировки положения */
+              width: 5px;  /* Установите желаемую ширину */
+              height: 300px; /* Установите желаемую высоту */
+              top: 70%; /* Центровка по вертикали */
+              left: 50%; /* Центровка по горизонтали */
+              transform: translate(-90%, -50%); /* Смещение контейнера для идеальной центровки */
+              transform-style: preserve-3d;
+              animation: rotate 25s infinite linear;
+          }
+          .dot {
+              position: absolute;
+              width: 2px;
+              height: 2px;
+              border-radius: 50%;
+          }
+
+          @keyframes rotate {
+              from {
+                  transform: rotateY(0deg);
+              }
+              to {
+                  transform: rotateY(360deg);
+              }
+          }
+          /*.tm-gallery-container {*/
+          /*    overflow-x: hidden;*/
+          /*    max-width: 100%;*/
+          /*    display: flex;*/
+          /*}*/
+
+          /*.tm-gallery {*/
+          /*    display: flex;*/
+          /*    flex: 0 0 auto;*/
+          /*    min-width: 100%;*/
+          /*    align-items: center;*/
+          /*    animation: scroll 60s linear infinite;*/
+          /*}*/
+
+          /*.tm-gallery-item {*/
+          /*    flex: 0 0 auto;*/
+          /*    margin-right: 5px; !* Уменьшите значение, чтобы сократить расстояние *!*/
+          /*}*/
+
+          /*@keyframes scroll {*/
+          /*    0% {*/
+          /*        transform: translateX(0%);*/
+          /*    }*/
+          /*    100% {*/
+          /*        transform: translateX(-100%);*/
+          /*    }*/
+          /*}*/
+
+          /* Дополнительный стиль для галереи */
+          /*.effect-honey {*/
+          /*    padding: 0.5rem;*/
+          /*    border-radius: 10px;*/
+          /*    background-color: #f5f5f5;*/
+          /*}*/
+
+          /*.tm-gallery img {*/
+          /*    max-width: 100%;*/
+          /*    height: auto;*/
+          /*    border-radius: 10px;*/
+          /*}*/
+      </style>
+      <style>
+          .ticker-tape-container {
+              overflow-x: hidden;
+              max-width: 1500px;
+              width: 100%;
+              display: flex;
+              position: relative;
+              /*justify-content: center;*/
+
+          }
+
+          /*.ticker-tape img {*/
+          /*    !*width: 400px; !* Задайте необходимую ширину *!*!*/
+          /*    height: 100px; !* Задайте необходимую высоту *!*/
+          /*    object-fit: cover; !* Это гарантирует, что изображение заполнит рамку и сохранит пропорции *!*/
+          /*    !*border-radius: 5px; !* Если хотите, можно добавить скругленные углы *!*!*/
+          /*    !*filter: grayscale(100%);*!*/
+          /*    !*opacity: 0.5; !* Контролирует прозрачность изображения, что может улучшить визуальный эффект *!*!*/
+          /*    !*mix-blend-mode: multiply;*!*/
+          /*}*/
+
+          .ticker-tape {
+
+              --direction: normal;
+              --duration: 60s;
+              --delay: 0s;
+              --iteration-count: infinite;
+              display: flex;
+              gap: 1rem;
+              flex: 0 0 auto;
+              margin-right: 1rem;
+              min-width: 100%;
+              max-width: 1200px;
+              align-items: center;
+              animation: scrmarqueeoll var(--duration) linear var(--delay) var(--iteration-count);
+              animation-play-state: var(--delay);
+              animation-delay: var(--delay);
+              animation-direction: var(--direction);
+          }
+
+          @keyframes scrmarqueeoll {
+              0% {
+                  transform: translateX(0%);
+              }
+              100% {
+                  transform: translateX(-100%);
+              }
+          }
+
+          /* Это просто стили для красоты */
+          .basic-styling {
+              border-radius: 10px;
+              background-color: white;
+              padding: 2rem;
+              color: #010101;
+              font-size: 1.5rem;
+              font-family: sans-serif;
+          }
+
+          /*.basic-styling span {*/
+          /*    padding: 0.25rem 1rem;*/
+          /*    border-radius: 10px;*/
+          /*    border: 2px dashed #5fb3ce;*/
+          /*    background-color: #86c5da;*/
+          /*}*/
+      </style>
+      <style>
+
+          .button-85 {
+              padding: 0.6em 2em;
+              border: none;
+              outline: none;
+              color: rgb(255, 255, 255);
+              background: blue;
+              cursor: pointer;
+              position: relative;
+              z-index: 0;
+              border-radius: 10px;
+              user-select: none;
+              -webkit-user-select: none;
+              touch-action: manipulation;
+          }
+
+          .button-85:before {
+              content: "";
+              background: linear-gradient(
+                      45deg,
+                      #fffb00,
+                      #fffb00,
+                      #fffb00,
+                      #002bff,
+                      #002bff,
+                      #002bff,
+                      #fffb00,
+                      #fffb00,
+                      #fffb00,
+                      #002bff,
+                      #002bff,
+                      #002bff
+
+                      /*#7a00ff,*/
+                      /*#ff00c8,*/
+                      /*#ff0000*/
+              );
+              position: absolute;
+              top: -2px;
+              left: -2px;
+              background-size: 400%;
+              z-index: -1;
+              filter: blur(5px);
+              -webkit-filter: blur(5px);
+              width: calc(100% + 4px);
+              height: calc(100% + 4px);
+              animation: glowing-button-85 20s linear infinite;
+              transition: opacity 0.3s ease-in-out;
+              border-radius: 10px;
+          }
+
+          @keyframes glowing-button-85 {
+              0% {
+                  background-position: 0 0;
+              }
+              50% {
+                  background-position: 400% 0;
+              }
+              100% {
+                  background-position: 0 0;
+              }
+          }
+
+          .button-85:after {
+              z-index: -1;
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background: #222;
+              left: 0;
+              top: 0;
+              border-radius: 10px;
+          }
+
+      </style>
+      <style>
+          /*<-------crypto-------->*/
+          #cryptoInfo {
+              background-color: #f9f9f9;
+              padding: 15px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+          }
+
+          #cryptoSelect {
+              padding: 10px;
+              border-radius: 5px;
+              width: 100%;
+              margin-bottom: 15px;
+          }
+
+          .tm-btn-primary {
+              margin-top: 20px;
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #1d72b8;
+              color: white;
+              text-align: center;
+              border-radius: 5px;
+              text-decoration: none;
+          }
+      </style>
+      <style>
+          /*<-----donations photo ------>*/
+          .img-fixed-size {
+              width: 100%; /* Ширина на 100% блока, чтобы изображение было адаптивным */
+              height: 200px; /* Фиксированная высота для всех изображений */
+              object-fit: cover; /* Обрезка изображения для сохранения пропорций внутри заданной области */
+          }
+          /*.tm-intro-text {*/
+          /*    max-width: 600px; !* Или любая подходящая ширина *!*/
+          /*    margin: 0 auto; !* Центрируем текст, если это нужно *!*/
+          /*    line-height: 1.6; !* Увеличиваем межстрочный интервал для удобочитаемости *!*/
+          /*}*/
+      </style>
+
+<!--      <meta charset="UTF-8">-->
+<!--      <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--      <title>WalletConnect Integration</title>-->
+<!--      &lt;!&ndash; Подключаем необходимые скрипты &ndash;&gt;-->
+<!--      <script src="dist/bundle.js"></script>-->
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+        <div class="container">
+
+          <div class="tm-next">
+<!--              <a href="#infinite" class="navbar-brand">IT Solutions </a>-->
+              <a href="#infinite" class="navbar-brand" style="margin-left: -190px;">
+                  <img src="img/logo-no-background.png" alt="IT Solutions Logo" style="height: 15px; width: auto;">
+              </a>
+<!--              <a href="#infinite" class="navbar-brand">-->
+<!--                  <img src="img/logo2.jpg" alt="IT Solutions Logo" style="height: 140px;">-->
+<!--              </a>-->
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">Home</a>
+
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">Solutions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#testimonials">Concepts</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#gallery">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>
+                <li class="nav-item" style="position: relative;">
+<!--                    <div style="position: absolute; right: 0; top: 0;">-->
+                        <a class="nav-link tm-nav-link" href="#donate">Donate</a>
+                    <img src="img/standwithukraine.png" alt="Logo" style="position: absolute; height: 90px; width: auto; right: -160px; top: 50%; transform: translateY(-50%);">
+<!--                    </div>-->
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Complex IT solutions for business</h2>
+            <p class="tm-hero-subtitle">
+                Innovative technologies for your success:
+              <br>CLOUD BLOCKCHAIN SECURITY AUTOMATION AND MORE
+            </p>
+        </div>
+          <div class="sphere-container"></div>
+
+      </div>
+
+
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="whatwedo" class="tm-section-pad-top">
+      
+      <div class="container">
+
+<!--            <div class="row tm-content-box">&lt;!&ndash; first row &ndash;&gt;-->
+<!--                <div class="col-lg-12 col-xl-12">-->
+<!--                    <div class="tm-intro-text-container">-->
+<!--                        <h2 class="tm-text-primary mb-4 tm-section-title">CONCEPTS</h2>-->
+<!--                        <p class="mb-4 tm-intro-text">-->
+<!--                            Best practices,-->
+<!--                            Proficiency and experience,-->
+<!--                            Customised solutions,-->
+<!--                            Partnership and confidence. </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>&lt;!&ndash; first row &ndash;&gt;-->
+
+          <!-- Row 1 -->
+          <div class="row tm-content-box"><!-- first row -->
+              <div class="col-lg-1">
+                  <i class="fa-solid fa-cloud fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Cloud Environments</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      Configuring and optimising leading cloud solutions.<br>
+                      Creation of both from scratch and modification of existing solutions.<br>
+                      Launching your product or migrating an existing one.<br>
+                  </div>
+              </div>
+
+              <div class="col-lg-1">
+                  <i class="fa-solid fa-code fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Software Development</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      Custom software development<br>
+                      Integration services<br>
+                      Analytic services<br>
+                      Testing and QA services.<br>
+                  </div>
+              </div>
+          </div><!-- first row -->
+
+          <!-- Row 2 -->
+          <div class="row tm-content-box"><!-- second row -->
+              <div class="col-lg-1">
+                  <i class="fa-brands fa-bitcoin fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Blockchain & Cryptocurrencies</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      DApp (Decentralized Applications)<br>
+                      Crypto Wallet & Custodians<br>
+                      New Crypto Coin/Token<br>
+                      NFT & Marketplace and others.<br>
+                  </div>
+              </div>
+
+              <div class="col-lg-1">
+                  <i class="fa-solid fa-user-shield fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Cybersecurity</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      Firewalls<br>
+                      EDR (endpoint detection and response)<br>
+                      XDR (extended detection and response)<br>
+                      Antivirus solutions.<br>
+                  </div>
+              </div>
+          </div><!-- second row -->
+
+          <!-- Row 3 -->
+          <div class="row tm-content-box"><!-- third row -->
+              <div class="col-lg-1">
+                  <i class="fa-solid fa-user-check fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Consulting and IT Audit</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      Audit current IT infrastructure, identify bottlenecks and propose optimal solutions<br>
+                      Complete infrastructure analysis, report with recommendations, assistance in implementing changes.<br>
+                  </div>
+                  <div class="tm-continue">
+                      <a href="#testimonials" class="tm-intro-text tm-btn-primary">Learn More</a>
+                  </div>
+              </div>
+
+              <div class="col-lg-1">
+                  <i class="fa-solid fa-envelope fa-3x text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-2">Support</h2>
+                      <p class="mb-4 tm-intro-text"></p>
+                      Servicing and maintaining ongoing solutions<br>
+                      Assist in mitigating operational risks and maximizing the impact of implemented solutions.<br>
+                  </div>
+                  <div class="tm-continue">
+                      <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
+                  </div>
+              </div>
+          </div><!-- third row -->
+
+      </div>
+      
+    </section>
+    
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+      <div class="container tm-testimonials-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <h2 class="text-white text-center mb-4 tm-section-title">Concepts</h2>
+            <p class="mx-auto tm-section-desc text-center">
+                Best practices,
+                Proficiency and experience,
+                Customised solutions,
+                Partnership and confidence.
+              </p>
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+              <div class="tm-testimonials-carousel">
+                <figure class="tm-testimonial-item">
+                    <img src="img/gitlab.png" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>Continuous delivery expands upon continuous integration by automatically deploying code changes to a testing/production environment.</blockquote>
+<!--                    <figcaption>CI/CD</figcaption>-->
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/terraform.png" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>Managing and provisioning infrastructure through code. It uses automation, version control, and continuous delivery.</blockquote>
+<!--                  <figcaption>Infrastructure as Code</figcaption>-->
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/automation.png" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>Automate as much of the software development lifecycle as possible.</blockquote>
+<!--                  <figcaption>Automation</figcaption>-->
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/microservices.png" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>Microservices as a new stage of evolution after the monolith.</blockquote>
+<!--                  <figcaption>Oliva Htoo (Devops)</figcaption>-->
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/monitoring.png" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>Monitor the entire development lifecycle — from planning, development, integration and testing, deployment, and operations.</blockquote>
+<!--                  <figcaption>Jacob Joker (Dev)</figcaption>-->
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-bg-overlay"></div>
+    </section>
+
+    <section id="gallery" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- Фотографии слева -->
+                    <div class="col-6">
+                        <figure class="effect-honey tm-gallery-item">
+                            <img src="img/certs.png" alt="Image 1" class="img-fluid" style="max-width: 300%; max-height: 600px; object-fit: contain;">
+                        </figure>
+                    </div>
+
+<!--                    <div class="col-6">-->
+<!--                        <figure class="effect-honey tm-gallery-item">-->
+<!--                            <img src="img/gcp-certificaiton.jpg" alt="Image 2" class="img-fluid">-->
+<!--                        </figure>-->
+<!--                    </div>-->
+<!--                    <div class="col-6">-->
+<!--                        <figure class="effect-honey tm-gallery-item">-->
+<!--                            <img src="img/aws.jpg" alt="Image 3" class="img-fluid">-->
+<!--                        </figure>-->
+<!--                    </div>-->
+<!--                    <div class="col-6">-->
+<!--                        <figure class="effect-honey tm-gallery-item">-->
+<!--                            <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">-->
+<!--                        </figure>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Текст справа -->
+                <div class="tm-text-primary tm-section-title mb-4">
+                    <p style="font-size: 30px; margin-top: 170px;">Competitive and qualified partner, with a team of professionals.</p>
+                </div>
+            </div>
+        </div>
+
+          <div class="text-center col-12">
+<!--              <h2 class="tm-text-primary tm-section-title mb-4">Solutionsss</h2>-->
+              <p class="mx-auto tm-section-desc"></p>
+          </div>
+        </div>
+          <div class="row" style=" padding-left: 135px;">
+              <div class="col-12">
+<!--                  <div class="mx-auto tm-gallery-container">-->
+                  <div class="basic-styling ticker-tape-container">
+<!--                      <div class="grid tm-gallery">-->
+                      <div class="ticker-tape">
+                          <!-- Оригинальные элементы галереи -->
+<!--                          <a href="img/gallery-tn-01.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
+<!--                                  <figcaption>-->
+<!--                                      <h2><i>Physical Health <span>Exercise!</span></i></h2>-->
+<!--                                  </figcaption>-->
+                              </figure>
+<!--                          </a>-->
+<!--                          <a href="img/gallery-tn-02.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
+                              </figure>
+<!--                          </a>-->
+<!--                          <a href="img/gallery-tn-03.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
+                              </figure>
+<!--                          </a>-->
+<!--                          <a href="img/gallery-tn-04.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
+                              </figure>
+<!--                          </a>-->
+<!--                          <a href="img/gallery-tn-05.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-05.jpg" alt="Image 5" class="img-fluid">
+                              </figure>
+<!--                          </a>-->
+<!--                          <a href="img/gallery-tn-06.jpg">-->
+                              <figure class="effect-honey tm-gallery-item">
+                                  <img src="img/gallery-tn-06.jpg" alt="Image 6" class="img-fluid">
+<!--                                  <figcaption>-->
+<!--                                  </figcaption>-->
+                              </figure>
+                          <figure class="effect-honey tm-gallery-item">
+                              <img src="img/gitlab-ticket.jpg" alt="Image 6" class="img-fluid">
+                              <!--                                  <figcaption>-->
+                              <!--                                  </figcaption>-->
+                          </figure>
+                          <figure class="effect-honey tm-gallery-item">
+                              <img src="img/kafka.jpg" alt="Image 6" class="img-fluid">
+                              <!--                                  <figcaption>-->
+                              <!--                                  </figcaption>-->
+                          </figure>
+<!--                          </a>-->
+                      </div>
+                  <div class="ticker-tape" aria-hidden="true">
+                      <!-- Оригинальные элементы галереи -->
+                      <!--                          <a href="img/gallery-tn-01.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                      <!--                          <a href="img/gallery-tn-02.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-02.jpg" alt="Image 2" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                      <!--                          <a href="img/gallery-tn-03.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-03.jpg" alt="Image 3" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                      <!--                          <a href="img/gallery-tn-04.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-04.jpg" alt="Image 4" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                      <!--                          <a href="img/gallery-tn-05.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-05.jpg" alt="Image 5" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                      <!--                          <a href="img/gallery-tn-06.jpg">-->
+                      <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gallery-tn-06.jpg" alt="Image 6" class="img-fluid">
+<!--                          <figcaption>-->
+<!--                          </figcaption>-->
+                      </figure>
+                      <!--                          </a>-->
+                  </div>
+<!--                  </div>-->
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    
+      <div class="container tm-container-contact">
+        
+        <div class="row">
+            
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Contact Us</h2>
+                <p class="mb-5">
+                    Let's discuss your needs!
+                    Do you have a question for our specialists, want to discuss your project, or learn more about our expertise? Feel free to send your request using the form below!
+                </p><br>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+                <form id="contactForm" method="post">
+<!--                <form action="/send-email" method="post">-->
+<!--              <form action="" method="get">-->
+                <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
+                <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+                <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+              </form>
+                <div id="responseMessage"></div> <!-- Для отображения результата -->
+            </div>
+
+
+            
+            <div class="col-sm-12 col-md-6">
+
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.tooplate.com/contact" class="item-link">
+                      <i class="far fa-2x fa-comment mr-4"></i>
+                      <span class="mb-0">Chat Online</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
+                      <i class="far fa-2x fa-envelope mr-4"></i>
+                      <span class="mb-0">mail@company.com</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.google.com/maps" class="item-link">
+                      <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                      <span class="mb-0">Our Location</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="tel:0100200340" class="item-link">
+                      <i class="fas fa-2x fa-phone-square mr-4"></i>
+                      <span class="mb-0">255-662-5566</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">&nbsp;</div>
+            
+            </div>
+            
+            
+        </div><!-- row ending -->
+        
+      </div>
+
+      	<footer class="text-center small tm-footer">
+          <p class="mb-0">
+          Copyright &copy; 2020 Company Name 
+          
+          . <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates">Designed by TOOPLATE</a></p>
+        </footer>
+
+    </section>
+    <section id="donate" class="tm-section-pad-top tm-parallax-2">
+        <div class="container">
+
+
+            <!-- Row 1 -->
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="img/donate_1.jpg" alt="Photo 1" class="img-fluid img-fixed-size">
+                </div>
+                <!-- Image 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="img/donate_2.jpg" alt="Photo 2" class="img-fluid img-fixed-size">
+                </div>
+                <!-- Image 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="img/donate_3.webp" alt="Photo 3" class="img-fluid img-fixed-size">
+                </div>
+                <!-- Image 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="img/donate_4.jpg" alt="Photo 4" class="img-fluid img-fixed-size">
+                </div>
+
+
+            <!-- Row 3 -->
+            <div class="row tm-content-box"><!-- third row -->
+
+                <div class="col-lg-1">
+<!--                    <i class="fa-solid fa-envelope fa-3x text-center tm-icon"></i>-->
+                </div>
+                <div class="col-lg-12">
+                    <div class="tm-intro-text-container">
+<!--                        <h2 class="tm-text-primary mb-2">Donations</h2>-->
+                        <p class="mb-4 tm-intro-text">
+                            For all those who want to help Ukrainian people, military, as well as those in need during the war in Ukraine.<br>
+                            These funds will be used for the purchase of medicines, provisions, as well as all the necessary things.<br>
+                            You can use any method of donation you are interested in: bank transfer, as well as popular cryptocurrencies.<br>
+                            Everything is as transparent and safe as possible. The site does not store your data.<br>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="cryptoSelect"><strong>Select Cryptocurrency:</strong></label>
+                        <select id="cryptoSelect" class="tm-intro-text">
+                            <option value="">-- Select Cryptocurrency --</option>
+                            <option value="bitcoin">Bitcoin</option>
+                            <option value="ethereum">Ethereum</option>
+                            <option value="usdt">USDT (Tether)</option>
+                        </select>
+                    </div>
+
+                    <!-- Address and QR code section -->
+                    <div id="cryptoInfo" style="display:none; margin-top: 20px;">
+                        <p><strong>Send your donation to the following address:</strong></p>
+                        <p id="cryptoAddress"></p>
+                        <p><strong>Scan the QR code below to donate:</strong></p>
+                        <img id="cryptoQR" src="" alt="QR code for donation" width="250">
+                    </div>
+                </div>
+<!--                <div class="tm-continue">-->
+<!--                    <a href="#donate" id="donateLink" class="tm-intro-text tm-btn-primary">Connect MetaMask</a>-->
+<!--                </div>-->
+            </div>
+
+                <!-- JavaScript for handling dropdown and dynamic content -->
+                <script>
+                    // Object containing crypto info: address and corresponding QR code image
+                    const cryptoData = {
+                        'bitcoin': {
+                            address: 'bc1q742fj0snrd7m775pk8fqzxyazjyqjvfuq8hmzh',
+                            qr: 'img/bitcoin-qr.png'
+                        },
+                        'ethereum': {
+                            address: '0xYourEthereumAddressHere',
+                            qr: 'path_to_your_ethereum_qr_code.png'
+                        },
+                        'usdt': {
+                            address: 'YourUSDTAddressHere',
+                            qr: 'path_to_your_usdt_qr_code.png'
+                        }
+                    };
+
+                    // Handling dropdown selection
+                    document.getElementById('cryptoSelect').addEventListener('change', function () {
+                        const selectedCrypto = this.value;
+                        const cryptoInfoDiv = document.getElementById('cryptoInfo');
+                        const cryptoAddressElement = document.getElementById('cryptoAddress');
+                        const cryptoQRElement = document.getElementById('cryptoQR');
+
+                        if (selectedCrypto && cryptoData[selectedCrypto]) {
+                            // Display the address and QR code
+                            cryptoAddressElement.textContent = cryptoData[selectedCrypto].address;
+                            cryptoQRElement.src = cryptoData[selectedCrypto].qr;
+                            cryptoInfoDiv.style.display = 'block';
+                        } else {
+                            // Hide the info if no valid crypto is selected
+                            cryptoInfoDiv.style.display = 'none';
+                        }
+                    });
+                </script>
+
+<!--                <div class="tm-continue">-->
+<!--&lt;!&ndash;                        <a href="#donate" class="tm-intro-text tm-btn-primary">Donate</a>&ndash;&gt;-->
+<!--                        <a href="#donate" id="donateLink" class="tm-intro-text tm-btn-primary">Donate</a>-->
+<!--                    </div>-->
+                </div>
+            </div><!-- third row -->
+
+        </div>
+        <div class="tm-bg-overlay"></div>
+    </section>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: false,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.sphere-container');
+            const numDots = 600; // Количество точек
+            const radius = 100; // Радиус шара
+
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+
+                // Полярные координаты
+                const theta = Math.random() * 2 * Math.PI; // Угол по горизонтали
+                const phi = Math.acos(2 * Math.random() - 1); // Угол по вертикали
+
+                // Декартовы координаты
+                const x = radius * Math.sin(phi) * Math.cos(theta);
+                const y = radius * Math.cos(phi); // Y теперь учитывает phi для горизонтального деления
+                const z = radius * Math.sin(phi) * Math.sin(theta);
+
+                dot.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+
+                // Назначение цвета: верхняя половина - голубая, нижняя - желтая
+                if (y > 0) {
+                    dot.style.backgroundColor = 'yellow';
+                } else {
+                    dot.style.backgroundColor = 'lightblue';
+                }
+
+                container.appendChild(dot);
+            }
+        });
+    </script>
+  <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Предотвращает переход на другую страницу
+
+          const formData = new URLSearchParams(new FormData(this));
+
+          fetch('/send-email', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded', // Указываем тип контента
+              },
+              body: formData.toString(),
+          })
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('responseMessage').innerText = data;
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  document.getElementById('responseMessage').innerText = 'An error occurred while sending the email.';
+              });
+      });
+  </script>
+<!--  <script>-->
+<!--      document.querySelector('.tm-btn-primary').addEventListener('click', async function(event) {-->
+<!--          event.preventDefault();-->
+
+<!--          // Создаем провайдера WalletConnect-->
+<!--          const provider = new WalletConnectProvider.default({-->
+<!--              infuraId: "your-infura-id" // Замените на ваш Infura ID-->
+<!--          });-->
+
+<!--          // Подключаемся к кошельку-->
+<!--          await provider.enable();-->
+
+<!--          const web3 = new Web3(provider);-->
+
+<!--          // Адрес получателя-->
+<!--          const toAddress = "0xYourRecipientAddress";-->
+<!--          // Сумма перевода в Ether-->
+<!--          const amountInEther = "0.01";-->
+
+<!--          const accounts = await web3.eth.getAccounts();-->
+<!--          const fromAddress = accounts[0];-->
+
+<!--          // Отправляем транзакцию-->
+<!--          web3.eth.sendTransaction({-->
+<!--              from: fromAddress,-->
+<!--              to: toAddress,-->
+<!--              value: web3.utils.toWei(amountInEther, 'ether')-->
+<!--          })-->
+<!--              .on('transactionHash', function(hash){-->
+<!--                  console.log("Transaction hash:", hash);-->
+<!--              })-->
+<!--              .on('confirmation', function(confirmationNumber, receipt){-->
+<!--                  console.log("Confirmation number:", confirmationNumber);-->
+<!--              })-->
+<!--              .on('error', console.error);-->
+<!--      });-->
+<!--  </script>-->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+<!--    <script src="https://unpkg.com/@walletconnect/web3-provider@1.6.6/dist/umd/index.min.js"></script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const donateLink = document.getElementById('donateLink');
+
+            if (donateLink) {  // Проверяем, что элемент существует
+                donateLink.addEventListener('click', async function(event) {
+                    event.preventDefault(); // Предотвращаем переход по ссылке
+
+                    // Проверяем, установлен ли MetaMask
+                    if (typeof window.ethereum !== 'undefined') {
+                        // Запрашиваем доступ к аккаунтам пользователя
+                        await ethereum.request({ method: 'eth_requestAccounts' });
+
+                        const web3 = new Web3(window.ethereum);
+                        const accounts = await web3.eth.getAccounts();
+                        const account = accounts[0];
+
+                        // Параметры транзакции
+                        const transactionParameters = {
+                            to: '0xYourRecipientAddress', // Замените на ваш Ethereum адрес
+                            from: account,
+                            value: web3.utils.toHex(web3.utils.toWei('0.01', 'ether')) // Сумма в ETH
+                        };
+
+                        // Отправка транзакции
+                        try {
+                            const txHash = await ethereum.request({
+                                method: 'eth_sendTransaction',
+                                params: [transactionParameters],
+                            });
+                            console.log('Transaction hash:', txHash);
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
+                    } else {
+                        alert('MetaMask не установлен. Пожалуйста, установите MetaMask и попробуйте снова.');
+                    }
+                });
+            } else {
+                console.error('Элемент donateLink не найден в DOM.');
+            }
+        });
+    </script>
+  </body>
+</html>
